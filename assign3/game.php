@@ -44,7 +44,7 @@ function rapinoe($rapinoe){
         default:
             echo "Rapinoe lifts her head and who does she see?!\n".
                 "[1] Morgan or [2] Julie.\n";
-                pass2(fgets(STDIN));
+                rapinoe(fgets(STDIN));
     }
 }
 
