@@ -77,12 +77,18 @@
                     Enter your name:*
                 </label><br>
                 <input type="text" name="guest_name" value="<?php echo $guest_name; ?>"/>
+                <?php if (in_array('guest_name', $errors)): ?>
+                <span style="color:dodgerblue;">Field is required.</span>
+                <?php endif ?>
             </p>
             <p>
                 <label for="email">
                     Enter a valid Email:*
                 </label><br>
                 <input type="text" name="guest_email" value="<?php echo $guest_email; ?>"/>
+                <?php if (in_array('guest_email', $errors)): ?>
+                <span style="color:dodgerblue;">Field is required.</span>
+                <?php endif ?>
             </p>
             <p>
                 <label for="message">
