@@ -1,9 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <title>Guestbook</title>
+        <style type="text/css">
+            main {
+                font-family: 'Raleway', sans-serif;
+                width:350px;
+                margin:30px auto;
+                
+            }
+            p {
+                padding:1%;
+            }
+            h1, h3 {
+                color:dodgerblue;
+                text-align:center;
+            }
+            form {
+                padding-left:15px;
+            }
+            button {
+                font-family: 'Raleway', sans-serif;
+                font-size:1.2em;
+                margin:10px auto;
+                padding:2%;
+                border-radius:5px;
+                display:block;
+            }
+            
+            label {
+                margin:1%;
+                padding:1%;
+            }
+            
+            input {
+                padding:2%;
+                width:90%;
+            }
+        </style>
     </head>
     <body>
+        <main>
         <h1>
             My Guestbook
         </h1>
@@ -84,6 +122,8 @@
             
             }
          ?>
+         
+       
         <h3>
             Sign the Guestbook!
         </h3>
@@ -110,7 +150,7 @@
             </p>
             <p>
                 <label for="phone">
-                    Enter a 10 digit Phone Number:
+                    Enter a 10 digit Phone Number:*
                 </label>
                 <br>
                 <input type="text" name="phone" value="<?php echo $phone; ?>"/><Br>
@@ -123,6 +163,7 @@
             
             
         </Form>
+        </main>
     </body>
 </html>
 
