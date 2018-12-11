@@ -22,7 +22,7 @@ if ($db == null) {
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My People</title>
+        <title>User Comments</title>
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <style type="text/css">
