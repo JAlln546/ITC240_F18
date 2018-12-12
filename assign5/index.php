@@ -81,7 +81,7 @@ if ($db == null) {
                 $commentQuery->execute();
                 $userComments = $commentQuery->fetchAll(PDO::FETCH_ASSOC);
                     
-                    foreach ($userComment as $comment) {
+                    foreach ($userComments as $comment) {
                         echo "<li>" . $comment['user_comment'] . "</li>";
                     }
                 ?>
