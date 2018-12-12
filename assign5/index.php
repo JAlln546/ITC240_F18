@@ -22,7 +22,7 @@ if ($db == null) {
 <!DOCTYPE html>
 <html>
     <head>
-        <title>User Comments</title>
+        <title>My People</title>
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <style type="text/css">
@@ -82,7 +82,7 @@ if ($db == null) {
                 $userComments = $commentQuery->fetchAll(PDO::FETCH_ASSOC);
                     
                     foreach ($userComment as $comment) {
-                        echo "<li>" . $comment['text'] . "</li>";
+                        echo "<li>" . $comment['user_comment'] . "</li>";
                     }
                 ?>
         </ul>
