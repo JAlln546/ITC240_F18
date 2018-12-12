@@ -65,16 +65,16 @@ if ($db == null) {
         <?php 
             
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                if (isset($_POST['text'])) {
-                    $comment = $_POST['text'];
+                if (isset($_POST['user_comment'])) {
+                    $comment = $_POST['user_comment'];
                     $member_id = $_SESSION['id'];
                     $addComment = $db->prepare(
-                        'INSERT INTO comments (member_id, text) '.
-            'VALUES (:member_id, :text)'
+                        'INSERT INTO comments (member_id, user_comment) '.
+            'VALUES (:member_id, :user_comment)'
         );
         $addComment->execute([
                 'member_id' => $member_id,
-                'text' => $comment
+                'user_comment' => $comment
             ]);
                     
                 }
@@ -93,13 +93,13 @@ if ($db == null) {
         <ul>
             <?php 
                 $commentQuery = $db->prepare(
-                    "SELECT * FROM comments"
+                    'SELECT * FROM comments'
                 );
                 $commentQuery->execute();
                 $userComments = $commentQuery->fetchAll(PDO::FETCH_ASSOC);
                     
                     foreach ($userComments as $commentPost) {
-                        echo "<li>" . $commentPost['text'] . "</li>";
+                        echo "<li>" . $commentPost['user_comment'] . "</li>";
                     }
                 ?>
         </ul>
@@ -113,7 +113,7 @@ if ($db == null) {
             <p>
                 <label>What you wan:</label>
                 <Br>
-                <textarea name="text"></textarea>
+                <textarea name="user_comment"></textarea>
             </p>
             <p>
                 <input type="submit" value="Comment"/>
