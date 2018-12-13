@@ -80,7 +80,7 @@ if ($db == null) {
                // Output until special "end of file" check returns true.
                while (!feof($myfile)) {
                    echo "<li>";
-                   echo fgets($myfile);
+                   echo fgets($myfile) . "<br>";
                    echo "</li>";
               }
                fclose($myfile);
